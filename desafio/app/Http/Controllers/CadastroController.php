@@ -49,6 +49,6 @@ class CadastroController extends Controller
     {
         $usuarios = Usuario::all();
 
-        return view('usuarios', ['usuarios' => $usuarios]); // Certifique-se de que a visão 'usuarios' existe
+        return view('usuarios', ['usuarios' => $usuarios]);
     }
 }
