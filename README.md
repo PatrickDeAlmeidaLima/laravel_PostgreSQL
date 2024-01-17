@@ -37,3 +37,9 @@ Antes de começar, certifique-se de ter os seguintes requisitos instalados em se
 6. **Executar o Projeto:**
    ```bash
     php artisan serve
+
+
+7. **Rotas disponiveis**
+   ```bash
+   /registro
+   /usuarios
