@@ -8,7 +8,6 @@ Antes de começar, certifique-se de ter os seguintes requisitos instalados em se
 
 - [PHP](https://www.php.net/) (recomendado PHP 7.4 ou superior)
 - [Composer](https://getcomposer.org/)
-- [Node.js](https://nodejs.org/) e [npm](https://www.npmjs.com/) (opcional, para desenvolvimento front-end)
 - [PostgreSQL](https://www.postgresql.org/) (ou outro banco de dados suportado pelo Laravel)
 
 ## Configuração do Projeto
