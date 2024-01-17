@@ -19,16 +19,18 @@
 
         .organizacao {
             width: 100%;
-            max-width: 500px;
-            min-width: 300px;
+            max-width: 800px;
+            display: flex;
+            margin: 0 auto;
         }
 
-        form {
+        form,
+        .usuarios-container {
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 50px auto;
+            width: 100%;
         }
 
         h2 {
@@ -74,6 +76,24 @@
             margin-bottom: 10px;
         }
 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+        }
+
         .btn-link {
             display: inline-block;
             margin-top: 10px;
@@ -94,46 +114,26 @@
 
 <body>
     <div class="organizacao">
-
-
-        <form method="post" action="/registro">
-            @csrf
-
-            <h2>Registro de Usuário</h2>
-
-            @if ($errors->any())
-                <div class="error">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-            @if (session('success'))
-                <div class="success">
-                    {{ session('success') }}
-                </div>
-            @endif
-
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" value="{{ old('nome') }}" required minlength="3" maxlength="50">
-
-            <label for="email">E-mail:</label>
-            <input type="email" name="email" value="{{ old('email') }}" required>
-
-            <label for="senha">Senha:</label>
-            <input type="password" name="senha" required minlength="6" maxlength="20">
-
-            <label for="confirmar_senha">Confirmação de Senha:</label>
-            <input type="password" name="senha_confirmation" required>
-
-            <button type="submit">Registrar</button>
-            <button onclick="window.location.href='/usuarios'" class="btn-link">Ir para Usuários</button>
-        </form>
-
-        
-        
+        <div class="usuarios-container">
+            <h2>Usuários Cadastrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($usuarios as $usuario)
+                        <tr>
+                            <td>{{ $usuario->nome }}</td>
+                            <td>{{ $usuario->email }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            <button onclick="window.location.href='/registro'" class="btn-link">Ir para Usuários</button>
+        </div>
     </div>
 </body>
 

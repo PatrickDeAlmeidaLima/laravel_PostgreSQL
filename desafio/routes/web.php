@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 Route::get('/registro', [CadastroController::class, 'mostrarFormularioRegistro']);
 Route::post('/registro', [CadastroController::class, 'processarRegistro']);
+Route::get('/usuarios', [CadastroController::class, 'mostrarUsuariosCadastrados']);
