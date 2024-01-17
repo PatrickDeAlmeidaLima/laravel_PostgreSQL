@@ -42,3 +42,9 @@ Antes de começar, certifique-se de ter os seguintes requisitos instalados em se
    ```bash
    /registro
    /usuarios
+
+
+8. **OBS.**
+   ```bash
+   Em caso de erro 500 por favor verificar .env
+   se ocorrer outro problema entrar em contato
