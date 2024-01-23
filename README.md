@@ -1,4 +1,3 @@
-# Nome do Seu Projeto Laravel
 
 Este é um breve guia sobre como configurar e executar o seu projeto Laravel.
 
